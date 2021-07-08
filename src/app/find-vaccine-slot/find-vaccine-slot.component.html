@@ -1,0 +1,30 @@
+
+<div class="wrapper fadeInDown">
+    <div class="formContent">
+     <h2 class="active"> Slot Search </h2>
+      <form (ngSubmit)="findByPin()"  >
+        <input type="text"  class="fadeIn second" required  name="pincode" [(ngModel)]="pinCode"  placeholder="Pin Code">
+        <input type="date"  class="fadeIn third" required  name="searchdate" [(ngModel)]="searchdate"  ><br>
+        <input type="submit" class="fadeIn fourth"  value="Search">
+        </form>
+      </div>
+  </div>
+
+  
+<div class="wrapper fadeInDown" id="searDiv" style="display: none;">
+  <div class="searchResult">
+   <h2 class="active"> Slot Search Results </h2>
+    <form  >
+      <div  *ngFor="let data of datas" class="resultDiv" >
+      <div class="hosName"> {{data.name}} </div>
+      <div> {{data.address}} </div>
+      <div> {{data.pincode}} </div>
+      <h2 class="vaccine">Vaccine: {{data.vaccine}}</h2>
+      <div>{{data.fee_type}}</div>
+      <div>Age {{data.min_age_limit}} - {{data.max_age_limit}} </div>
+      <div>Dose1: {{data.available_capacity_dose1}}  </div>
+      <div>Dose2: {{data.available_capacity_dose2}}  </div>
+      </div>
+      </form>
+    </div>
+</div>

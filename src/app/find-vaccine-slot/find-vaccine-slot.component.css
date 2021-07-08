@@ -1,0 +1,18 @@
+.resultDiv{
+    background-color:white;
+    width: 800px;
+    border: 1px solid rgb(19, 20, 19);
+    border-radius: 5px;
+    padding: 50px;
+    margin-left: 175px;
+    height: 300px;
+
+}
+.vaccine{
+color: black;
+}
+.hosName{
+    font-size: 17px;
+    font-weight: 600;
+    position: absolute;
+}
